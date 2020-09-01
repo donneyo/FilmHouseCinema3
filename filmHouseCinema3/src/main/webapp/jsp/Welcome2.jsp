@@ -12,6 +12,7 @@
 	<link href="style.css" rel="stylesheet">
 </head>
 
+<!-- lol -->
 <body class="body">
 	<%@ include file="Header2.jsp"%>
 	<section class="hero">
