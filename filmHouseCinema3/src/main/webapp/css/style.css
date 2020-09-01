@@ -1,0 +1,684 @@
+@charset "ISO-8859-1";
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap')
+	;
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap')
+	;
+
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 10px;
+}
+
+.nav-item a {
+	font-family: 'Noto Sans JP', sans-serif;
+	 text-transform: uppercase;
+	background: linear-gradient(to top, #ffe838, #fd57bf);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/*. is removed from the background url and it still work  */
+.body {
+	overflow-x: hidden;
+	background: url("../images/sitebg.jpg") center fixed no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+ul {
+	list-style: none;
+}
+
+.text h1 {
+	text-align: center;
+	font-size: 8rem;
+	margin: 3rem 0 0 3rem;
+	padding: 1rem;
+	background: linear-gradient(to top, #ffe838, #fd57bf);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.text h3 {
+	text-align: center;
+	font-size: 8rem;
+	margin: 0rem 0rem 0rem 3rem;
+	padding: 1rem;
+	background: linear-gradient(to top, #ffe838, #fd57bf);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.text h2 {
+	text-align: center;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	font-weight: 300;
+	background: linear-gradient(to top, #ffe838, #fd57bf);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+p {
+	text-align: center;
+	background: linear-gradient(to top, #ffe838, #fd57bf);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.hero {
+	width: 100%;
+	height: 100vh;
+	background: url("../images/sitebg.jpg") center fixed no-repeat;
+	display: flex;
+	background-size: cover;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	z-index: 0;
+}
+
+.hero::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: inherit;
+	height: inherit;
+	background: linear-gradient(to top right, #7a1508e0, #e72f0ed8);
+	z-index: -1;
+}
+
+/*header start here*/
+header {
+	width: 100%;
+	position: absolute;
+	background: #16162d;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+.menu-icons {
+	color: #eb3007;
+	font-size: 4rem;
+	position: absolute;
+	top: 50%;
+	right: 2rem;
+	transform: translateY(-50%);
+	cursor: pointer;
+	z-index: 1500;
+	display: none;
+}
+
+nav {
+	width: 100%;
+	height: 10rem;
+	border-bottom: 1px solid rgba(255, 255, 255, .1);
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	width: 100rem;
+	height: 6rem;
+	font-size: 2.5rem;
+	background: linear-gradient(to top, #ffe838, #fd57bf);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: flex;
+	border-radius: 100%;
+	left: 15rem;
+}
+
+.nav-list {
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+
+.nav-list  li {
+	line-height: 8rem;
+	position: relative;
+}
+
+.sub-menu li {
+	line-height: 4rem;
+}
+
+.nav-list a {
+	display: block;
+	padding: 0 1.5rem;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	transition: color 650ms;
+}
+
+.nav-list a:hover {
+	color: #eb3007;
+}
+
+.sub-menu {
+	width: 20rem;
+	display: block;
+	position: absolute;
+	border-top: 3px solid #eb3007;
+	background-color: #191919;
+	z-index: 100;
+	top: 16rem;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 650ms ease;
+}
+
+.sub-menu::before {
+	content: '';
+	position: absolute;
+	top: -2.5rem;
+	left: 3rem;
+	border: 1.2rem solid transparent;
+	border-bottom-color: #eb3007;
+}
+
+.sub-menu .sub-menu::before {
+	top: .9rem;
+	left: -2.5rem;
+	border: 1.2rem solid transparent;
+	border-right-color: #eb3007;
+}
+
+.sub-menu .sub-menu {
+	border-top: none;
+	border-left: 3px solid #eb3007;
+	top: 0;
+	left: 160%;
+}
+
+.nav-list li:hover>.sub-menu {
+	top: 8rem;
+	opacity: 1;
+	visibility: visible;
+}
+
+.sub-menu li:hover>.sub-menu {
+	top: 0;
+	left: 100%;
+}
+
+/*header stop here*/
+
+/*header ends here*/
+
+/*loginView and registerview*/
+.row h3 {
+	text-align: center;
+	font-size: 3.8rem;
+	font-family: 'Noto Sans JP', sans-serif;
+	margin: 8rem 0rem 0rem 50rem;
+	padding: 1rem;
+	background: linear-gradient(to top, #ffe838, #fd57bf);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	position: relative;
+}
+
+#button .btn{
+    margin: 3rem 1rem 5rem 0rem;
+    background-color: #f78536;
+    border-radius: 4px;
+    color: white;
+     padding: 15px 32px;
+     text-align: center;
+   text-decoration:none;
+    display: inline-block;
+     font-size: 12px;
+     font-weight: bold;
+    cursor: pointer;
+    line-height: 1.42857;
+    text-transform: uppercase;
+}
+
+#button .btn:hover{
+    background-color:  #38312c;
+}
+
+/*original row before used for footer*/
+/*
+.row{
+    padding-top:10px;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+}*/
+.long {
+	padding-top: 0px;
+	margin-top: 0rem;
+	width: 100%;
+}
+
+input[type="login id"], textarea[placeholder] {
+	font-size: 2rem;
+	height: 5rem;
+	width: 100%;
+}
+
+.row h3::after {
+	position: absolute;
+	content: '';
+	margin-top: 10rem;
+	left: 50%;
+	width: 100px;
+	margin-left: -50px;
+	height: 2px;
+	background: #f78536;
+}
+
+.container, .textfield {
+	position: absolute;
+	width: 100%;
+	margin: 0rem 0rem 0rem 0rem;
+	top: 5rem;
+	height: 3rem;
+}
+
+.col {
+	position: absolute;
+	padding: 1rem;
+	margin: 0rem 2rem 0rem 0rem;
+	width: 100%;
+}
+
+.form-group {
+	margin: 20rem 2rem 0rem 0rem;
+}
+
+.col, input[type="text"], input[type="password"], input[type="file"] {
+	height: 5rem;
+	width: 100%;
+	font-size: 2rem;
+}
+
+
+
+label {
+	font-size: 1.8rem;
+	font-family: 'Noto Sans JP', sans-serif;
+	margin: 0rem 0rem 0rem 0rem;
+	padding: 1rem;
+	background: linear-gradient(to top, #ffe838, #fd57bf);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	position: relative;
+}
+
+
+@media screen and (max-width: 600px) {
+
+	
+	.col-sm-6 .card  {
+	width: 370px;
+	margin-top: 10rem;
+	margin-left: 0rem;
+	margin-right: 10rem;
+	position: relative;
+	background-color: #16162d;
+	border-color: #16162d;
+     }
+     
+     
+	.row h3 {
+		margin: 8rem 6rem 0rem 16rem;
+		font-size: 3rem;
+		font-family: 'Noto Sans JP', sans-serif;
+		padding: 1rem;
+		background: linear-gradient(to top, #ffe838, #fd57bf);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		position: relative;
+	}
+	
+	#small-book {
+		margin: 8rem 0rem 0rem 18rem;
+		font-size: 3rem;
+		font-family: 'Noto Sans JP', sans-serif;
+	}
+	#small-profile {
+		margin: 8rem 0rem 0rem 15rem;
+		font-size: 3rem;
+		font-family: 'Noto Sans JP', sans-serif;
+	}
+	#small-bookview {
+		margin: 8rem 0rem 0rem 1rem;
+		font-size: 3rem;
+		font-family: 'Noto Sans JP', sans-serif;
+	}
+	.form-group {
+		margin: 15rem 5rem 0rem 0rem;
+	}
+	
+	
+	.checkbtn {
+		display: block;
+		padding: 0 0 0 0px;
+		float: right;
+	}
+	
+	label.logo {
+		font-size: 2rem;
+		padding: 10px 0px 0 160px;
+		left: 0;
+	}
+	nav ul li {
+		display: flex;
+		margin: 50px 0;
+		line-height: 30px;
+	}
+	nav ul li a {
+		font-size: 20px;
+	}
+	.nav-list {
+		position: fixed;
+		top: 7.5rem;
+		left: 0;
+		height: 200vh;
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		background-color: #16162d;
+		transition: all .5s;
+		z-index: 1000;
+	}
+	.nav-list :hover {
+		color: #fff;
+	}
+	.nav-list>li {
+		line-height: 2rem;
+	}
+	.sub-menu {
+		position: initial;
+		border: 3px solid transparent;
+		border-left-color: #eb3007;
+		margin-left: 1rem;
+		max-height: 0;
+		display: none;
+	}
+	.nav-item :hover {
+		color: #eee;
+	}
+	.sub-menu::before {
+		display: none;
+	}
+	.menu-icons {
+		display: block;
+		
+	}
+	.ion-md-close {
+		display: none;
+	}
+	nav.active .ion-md-close {
+		display: block;
+	}
+	nav.active .ion-md-menu {
+		display: none;
+	}
+	nav.active .nav-list {
+		display: flex;
+	}
+}
+
+
+/*loginView*/
+
+/*div for image list view*/
+.fh5co-blog {
+	margin-bottom: 60px;
+}
+
+.fh5co-blog a img {
+	width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+	.fh5co-blog {
+		width: 100%;
+	}
+}
+
+.fh5co-blog .blog-text {
+	margin-bottom: 30px;
+	position: relative;
+	background-color: #16162d;
+	width: 100%;
+	padding: 30px;
+}
+
+.fh5co-blog .blog-text span {
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.fh5co-blog .blog-text span.posted_by {
+	font-style: italic;
+	background: linear-gradient(to top, #ffe838, #fd57bf);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 18px;
+}
+
+.fh5co-blog .blog-text span.comment {
+	float: right;
+}
+/*.fh5co-blog .blog-text span.comment a {
+    color: rgba(0, 0, 0, 0.3);
+  }*/
+.fh5co-blog .blog-text span.comment a i {
+	color: #F78536;
+	padding-left: 7px;
+}
+
+.fh5co-blog .blog-text h3 {
+	font-size: 20px;
+	margin-bottom: 20px;
+	font-weight: 400;
+	line-height: 1.5;
+	background: linear-gradient(to top, #ffe838, #fd57bf);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.fh5co-blog .blog-text p {
+	float: left;
+	font-size: 20px;
+	margin-bottom: 20px;
+	font-weight: 400;
+	line-height: 1.5;
+	background: linear-gradient(to top, #ffe838, #fd57bf);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+div a.price {
+	float: left;
+	margin-right: 20rem;
+	font-size: 15px;
+	background: linear-gradient(to top, #ffe838, #fd57bf);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/*div for movielist*/
+
+/*booklist start*/
+.heading-title {
+	font-size: 3.8rem;
+	font-family: 'Noto Sans JP', sans-serif;
+	margin: 8rem 0rem 3rem 2rem;
+	padding: 1rem;
+	background: linear-gradient(to top, #ffe838, #fd57bf);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	position: relative;
+}
+
+div span.posted_by {
+	margin: 0rem 0rem 0rem 2rem;
+	font-style: italic;
+	background: linear-gradient(to top, #ffe838, #fd57bf);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 18px;
+}
+
+.posted_by {
+	display: flex;
+	margin: 0rem 0rem 3rem 2rem;
+	font-style: italic;
+	background: linear-gradient(to top, #ffe838, #fd57bf);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 18px;
+	text-align: left;
+}
+
+.form-level {
+	margin: 0rem 2rem 0rem 0rem;
+	font-size: 2rem;
+}
+
+#flow {
+	padding-top: 0px;
+	margin-top: 0rem;
+	margin-bottom: 0rem;
+}
+
+/*boolist end*/
+
+/*footer start*/
+footer {
+	background-color:;
+	margin-top: 50rem;
+}
+
+.social-icons {
+	text-align: center;
+	font-size: 3rem;
+	font-weight: 400;
+	margin-bottom: 2rem;
+}
+
+.social-icons a {
+	padding-right: 2rem;
+}
+
+.social-icons a:hover {
+	background: #fff;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.social-icons-p {
+	font-size: 1.2rem;
+}
+
+/*media queries*/
+@media screen and (max-width: 768px) {
+	footer {
+		background-color: #16162d;
+		padding: 3rem 0 6rem 0;
+	}
+}
+
+/*css for movie card*/
+.card {
+	width: 370px;
+	margin-left: 5rem;
+	margin-top: 10rem;
+	margin-left: 3rem;
+	margin-right: 3rem;
+	position: relative;
+	 background-color: #16162d;
+	border-color: #16162d;
+}
+
+.cover-card {
+	margin-top: 20rem;
+}
+
+/*div .card{
+    width: 370px;
+    height: 780px;
+    margin-top: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    background-color: #16162d;
+    border-color: #16162d;
+}*/
+.card-img-top {
+	height: 550px;
+	padding-top: 10px;
+	
+}
+
+.card-title {
+	font-size: 20px;
+	padding-bottom: 20px;
+	background: linear-gradient(to top, #ffe838, #fd57bf);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.card-body {
+	font-size: 20px;
+	padding-bottom: 20px;
+	border-style: none;
+	
+}
+
+.list-group  .list-group-item {
+	background: linear-gradient(to top, #ffe838, #fd57bf);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-style: italic;
+	font-size: 20px;
+	border-style: none;
+}
+
+.list-group {
+	background-color: #16162d;
+}
+      
+      
+      #boo{  
+      margin: 2rem 1rem 2rem 2rem;
+    background-color: #f78536;
+    border-radius: 4px;
+    padding:10px 5px;
+    color: white;
+     width: 6rem;
+     text-align: center;
+   text-decoration:none;
+    display: block;
+     font-size: 12px;
+     font-weight: bold;
+    cursor: pointer;
+    line-height: 1.42857;
+    text-transform: uppercase;
+      }
+     
+      #boo:hover{
+        background: #38312c;
+      }
+
+
+/*footer end*/
